@@ -144,7 +144,7 @@
 </template>
 
 <script>
-import SymphonyService from "@/services/SymphonyService";
+import SymfonyService from "@/services/SymfonyService";
 export default {
   data() {
     return {
@@ -239,7 +239,7 @@ export default {
           no: 1,
         };
 
-        const response = await SymphonyService.registerPet(postData);
+        const response = await SymfonyService.registerPet(postData);
         this.setAlert(`Success: ${response.data.message}`, true, "success");
       } catch (error) {
         this.isButtonDisabled = false;
